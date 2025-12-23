@@ -1,5 +1,7 @@
 # GitHub User Activity CLI
 
+https://roadmap.sh/projects/github-user-activity
+
 A command-line tool (CLI) in Java to view GitHub user activities directly from the terminal.
 
 ## 🚀 Features
