@@ -8,6 +8,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.Objects;
 
 public class CLI {
 
@@ -40,10 +41,10 @@ public class CLI {
                     JsonObject event = events.getJsonObject(i);
                     String type = event.getString("type");
                     JsonObject repo = event.getJsonObject("repo");
-                    String repoName = repo != null ? repo.getString("name") : "Unknown";
+                    String repoName = Objects.nonNull(repo) ? repo.getString("name") : "Unknown";
 
                     String activity = formatActivity(type, repoName, event);
-                    if (activity != null) {
+                    if (Objects.nonNull(activity)) {
                         System.out.println("- " + activity);
                     }
                 }
@@ -61,7 +62,7 @@ public class CLI {
     private static String formatActivity(String type, String repoName, JsonObject event) {
         try {
             JsonObject payload = event.getJsonObject("payload");
-            if (payload == null) {
+            if (Objects.isNull(payload)) {
                 return String.format("Unknown event in %s", repoName);
             }
             switch (type) {
