@@ -1,7 +1,5 @@
 # GitHub User Activity CLI
 
-https://roadmap.sh/projects/github-user-activity
-
 A command-line tool (CLI) in Java to view GitHub user activities directly from the terminal.
 
 ## 🚀 Features
@@ -24,7 +22,7 @@ A command-line tool (CLI) in Java to view GitHub user activities directly from t
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/github-user-activity.git
+   git clone https://github.com/Nattyeah/Github-User-Activity.git
    cd github-user-activity
    ```
 
